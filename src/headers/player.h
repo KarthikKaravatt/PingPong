@@ -14,7 +14,7 @@ public:
   int getScore();
   void scoreGoal();
 
-private:
+protected:
   Rectangle playerShape;
   float speed;
   Color color;

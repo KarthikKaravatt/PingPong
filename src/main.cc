@@ -1,5 +1,6 @@
 #include "headers/ball.h"
 #include "headers/player.h"
+#include "headers/ai.h"
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
@@ -19,7 +20,8 @@ int main(int argc, char *argv[]) {
   srand(time(NULL));
   SetWindowMinSize(1280, 720);
   Player playerOne = Player("LEFT", WHITE, KEY_W, KEY_S);
-  Player playerTwo = Player("RIGHT", WHITE, KEY_UP, KEY_DOWN);
+  // Player playerTwo = Player("RIGHT", WHITE, KEY_UP, KEY_DOWN);
+  Ai playerTwo = Ai("RIGHT", WHITE);
   Ball ball = Ball(10.0f, WHITE);
   ball.push();
   while (!WindowShouldClose()) {
@@ -27,7 +29,7 @@ int main(int argc, char *argv[]) {
     ClearBackground(BLACK);
     ball.update(playerOne, playerTwo);
     playerOne.update();
-    playerTwo.update();
+    playerTwo.update(ball.getPos());
     displayScore(playerOne.getScore(), playerTwo.getScore());
     EndDrawing();
   }

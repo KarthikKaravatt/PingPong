@@ -19,6 +19,7 @@ Player::Player(std::string pos, Color color, int upKey, int downKey)
 }
 
 Rectangle Player::getRec() { return this->playerShape; }
+
 void Player::update() {
   move();
   DrawRectangleRec(this->playerShape, color);

@@ -63,4 +63,8 @@ void Ball::reset() {
   push();
 }
 
+Vector2 Ball::getPos(){
+  return this->center;
+}
+
 Ball::~Ball() {}

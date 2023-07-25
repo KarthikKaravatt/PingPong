@@ -12,6 +12,7 @@ public:
 
   void update(Player& playerOne, Player& PlayerTwo);
   void push();
+  Vector2 getPos();
 
 private:
   Vector2 center;
