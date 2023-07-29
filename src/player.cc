@@ -20,7 +20,7 @@ Player::Player(std::string pos, Color color, int upKey, int downKey)
 
 Rectangle Player::getRec() { return this->playerShape; }
 
-void Player::update() {
+void Player::update(Vector2 ballPos){
   move();
   DrawRectangleRec(this->playerShape, color);
   if (IsWindowResized()) {

@@ -9,7 +9,7 @@ public:
   Player &operator=(Player &&) = default;
   Player &operator=(const Player &) = default;
   ~Player();
-  void update();
+  virtual void update(Vector2 ballPos);
   Rectangle getRec();
   int getScore();
   void scoreGoal();

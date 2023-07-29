@@ -15,7 +15,7 @@ Ai::Ai(std::string pos, Color color) : Player(pos, color, 0, 0) {
                        height};
 }
 
-void Ai::update(Vector2 ballPos) {
+void Ai::update(Vector2 ballPos){
   // same as the Player class but with ball pos as parmeter 
   move(ballPos);
   DrawRectangleRec(this->playerShape, color);
@@ -41,3 +41,4 @@ void Ai::move(Vector2 ballPos) {
   this->playerShape.y = std::max(
       0.0f, std::min(GetScreenHeight() - this->playerShape.height, newY));
 }
+

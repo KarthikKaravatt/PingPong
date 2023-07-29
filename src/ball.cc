@@ -67,4 +67,7 @@ Vector2 Ball::getPos(){
   return this->center;
 }
 
+Vector2 Ball::getVel(){
+  return this->velocity;
+}
 Ball::~Ball() {}
